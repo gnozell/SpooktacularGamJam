@@ -67,6 +67,6 @@ $RECYCLE.BIN/
 Builds/Builds.unity3d
 *.exe
 
-*.meta
+//*.meta
 
-*.meta
+//*.meta
