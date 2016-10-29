@@ -48,23 +48,21 @@ public class SceneManagerLevel1 : MonoBehaviour {
 				if (Hill3Y < castleend.position.y) {
 					castlehill.GetComponent<Bobbing> ().originalY = Hill3Y + (23 * Time.deltaTime);
 				} else {
-					phase = 3;
-					startTime = 3f;
+					phase = 4;
+					startTime = 15f;
 				}
 				break;
 
 			}
 
 		case 4:{
-
-				if (startTime > 0) {
+				if (startTime <= 0) {
 					SceneManager.LoadScene ("Level1Cont");
 				} else {
 					startTime -= Time.deltaTime;
 				}
 				//wait then next scene
 				break;
-
 			}
 
 		default:{

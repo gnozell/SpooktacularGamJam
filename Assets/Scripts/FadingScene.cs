@@ -2,28 +2,25 @@
 using System.Collections;
 
 public class FadingScene : MonoBehaviour {
-	public Texture2D fadeOutTexture;
-	public float fadeSpeed = 0.8f;
+	public SpriteRenderer fadeOutTexture;
+	public float fadeSpeed = 0.008f;
+	public float numOfTexts = 0;
 
-	private int drawDepth = -1000;
-	private float alpha = 1.0f;
-	private int fadeDir = -1;
+	private Color color;
+	private float waitTimer = 0;
 
-	void onGUI() {
-		alpha += fadeDir * fadeSpeed * Time.deltaTime;
-		alpha = Mathf.Clamp01 (alpha);
-
-		GUI.color = new Color (GUI.color.r, GUI.color.g, GUI.color.b, alpha);
-		GUI.depth = drawDepth;
-		GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), fadeOutTexture);
+	void Start() {
+		color = fadeOutTexture.color;
+		color.a = 0f;
+		fadeOutTexture.color = color;
 	}
 
-	public float BeginFade(int direction) {
-		fadeDir = direction;
-		return (fadeSpeed);
-	}
-
-	void onLevelWasLoaded(){
-		BeginFade (-1);
+	void Update() {
+		waitTimer += Time.deltaTime;
+		if (waitTimer >= (20 * numOfTexts)) {
+			color.a += 0.001f;
+			fadeOutTexture.color = color;
+		}
 	}
 }
+

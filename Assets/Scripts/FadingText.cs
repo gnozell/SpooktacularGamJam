@@ -27,7 +27,7 @@ public class FadingText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		outerWaitTimer += Time.deltaTime;
-		if (outerWaitTimer >= (10 * textsBefore)) {
+		if (outerWaitTimer >= (8 * textsBefore)) {
 			if (!fadeOut) {
 				// fading the color in
 				color.a += 0.006f;
