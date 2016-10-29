@@ -36,13 +36,12 @@ public class dan_anim : MonoBehaviour {
         speed = 1;
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 3.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-        var j = Input.GetAxis("Jump") * Time.deltaTime * 150.0f;
-        
+        if(Input.GetAxis("Jump") != 0 && this.rb.velocity.y == 0) rb.AddForce(new Vector3(0, 150f, 0));
+
         transform.Translate(x, 0, z);
 
-        if (this.transform.position.x > minX || this.transform.position.x < maxX) transform.Translate(x * -1, 0, 0);
-        if (this.transform.position.z > minZ || this.transform.position.z < maxZ) transform.Translate(0, 0, z * -1);
-        if (this.rb.velocity.y == 0) rb.AddForce(new Vector3(0, j, 0));
+        //if (this.transform.position.x > minX || this.transform.position.x < maxX) transform.Translate(x * -1, 0, 0);
+        //if (this.transform.position.z > minZ || this.transform.position.z < maxZ) transform.Translate(0, 0, z * -1);
         spriter.sprite = faceFront;
         if (Input.GetAxis("Horizontal") < 0f)
         {
