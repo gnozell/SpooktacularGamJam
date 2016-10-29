@@ -46,7 +46,7 @@ public class SceneManagerLevel1 : MonoBehaviour {
 		case 3:{
 				float Hill3Y = castlehill.GetComponent<Bobbing> ().originalY;
 				if (Hill3Y < castleend.position.y) {
-					castlehill.GetComponent<Bobbing> ().originalY = Hill3Y + (20 * Time.deltaTime);
+					castlehill.GetComponent<Bobbing> ().originalY = Hill3Y + (23 * Time.deltaTime);
 				} else {
 					phase = 3;
 					startTime = 3f;
