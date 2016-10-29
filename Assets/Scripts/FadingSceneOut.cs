@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class FadingScene : MonoBehaviour {
+public class FadingSceneOut : MonoBehaviour {
 	public SpriteRenderer fadeOutTexture;
-	public float fadeSpeed = 0.008f;
 	public float numOfTexts = 0;
+	public float fadeSpeed = 0.002f;
 
 	private Color color;
 	private float waitTimer = 0;
@@ -17,8 +18,8 @@ public class FadingScene : MonoBehaviour {
 
 	void Update() {
 		waitTimer += Time.deltaTime;
-		if (waitTimer >= (20 * numOfTexts)) {
-			color.a += 0.001f;
+		if (waitTimer >= (5 * numOfTexts)) {
+			color.a += fadeSpeed;
 			fadeOutTexture.color = color;
 		}
 	}
