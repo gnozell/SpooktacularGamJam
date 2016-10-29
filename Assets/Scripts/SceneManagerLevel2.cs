@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SceneManagerLevel2 : MonoBehaviour {
 
@@ -15,11 +16,11 @@ public class SceneManagerLevel2 : MonoBehaviour {
 	void Update () {
 	    if(WomanIsTriggered)
         {
-            //win state
+            SceneManager.LoadScene("Level2Cont");
         }
         if (DeathIsTriggered)
         {
-            //fail state
+            SceneManager.LoadScene("GameOverMenu");
         }
 	}
 }
