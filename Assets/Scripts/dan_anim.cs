@@ -14,9 +14,9 @@ public class dan_anim : MonoBehaviour {
     public Sprite faceFront;
     SpriteRenderer spriter;
 
-    int[] timers = new int[6];
+    float[] timers = new float[6];
     int[] isGoingLeft = new int [] {1, -1, 1, -1, -1, 1};
-    public int speed;
+    public float speed;
 
     // Use this for initialization
     void Start () {
@@ -59,11 +59,11 @@ public class dan_anim : MonoBehaviour {
         if (timers[5] > 20) isGoingLeft[5] = -1;
         if (timers[5] < -20) isGoingLeft[5] = 1;
 
-        timers[0] += isGoingLeft[0];
-        timers[1] += isGoingLeft[1];
-        timers[2] += isGoingLeft[2];
-        timers[3] += isGoingLeft[3];
-        timers[4] += isGoingLeft[4];
-        timers[5] += isGoingLeft[5];
+        timers[0] += (float)isGoingLeft[0] * speed / 30f;
+        timers[1] += (float)isGoingLeft[1] * speed / 30f;
+        timers[2] += (float)isGoingLeft[2] * speed / 30f;
+        timers[3] += (float)isGoingLeft[3] * speed / 30f;
+        timers[4] += (float)isGoingLeft[4] * speed / 30f;
+        timers[5] += (float)isGoingLeft[5] * speed / 30f;
     }
 }
