@@ -8,7 +8,7 @@ public class Bobbing : MonoBehaviour {
 	public bool directionbool = true;
 	public float floatStrength = 0.2f; 
 
-	float originalY;
+	public float originalY;
 	float direction;
 
 	void Start()
