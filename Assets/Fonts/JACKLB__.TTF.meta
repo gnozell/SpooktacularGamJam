@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 230ac3de8bb4bd841a43f290d274eb65
+timeCreated: 1477771734
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - JackLantern BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f79481802ba49a140bb6f8728fd6d37f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
