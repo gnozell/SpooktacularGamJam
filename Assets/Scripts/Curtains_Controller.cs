@@ -9,8 +9,13 @@ public class Curtains_Controller : MonoBehaviour {
 	public Sprite closed;
 	public Sprite open;
 
+	public Level3curtainslooking looking;
+
 	public bool shut = true;
 
+	public void start_looking(){
+		looking.looking = true;
+	}
 
 	// Use this for initialization
 	void Start () {
