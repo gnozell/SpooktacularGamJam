@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: 6e8a909c7f21b4347917df5744460c59
-timeCreated: 1477786627
-=======
-guid: dfc5ced53e5dd48a3bf0cc0c26ad7be3
-timeCreated: 1477786541
->>>>>>> Stashed changes
+guid: fbf14e100ce8a4d3da6185335fc64746
+timeCreated: 1477778657
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -35,41 +30,24 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< Updated upstream
     aniso: -1
     mipBias: -1
     wrapMode: -1
   nPOTScale: 1
-=======
-    aniso: 16
-    mipBias: -1
-    wrapMode: 1
-  nPOTScale: 0
->>>>>>> Stashed changes
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-<<<<<<< Updated upstream
   spriteMode: 0
-=======
-  spriteMode: 1
->>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-<<<<<<< Updated upstream
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: -1
-=======
-  alphaIsTransparency: 1
-  spriteTessellationDetail: -1
-  textureType: 8
->>>>>>> Stashed changes
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
