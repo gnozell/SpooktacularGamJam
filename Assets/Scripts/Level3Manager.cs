@@ -255,7 +255,22 @@ public class Level3Manager : MonoBehaviour {
 
 		case 13:
 			{
-				//two move
+				// two move
+				// opener 1 opens curtain 2
+				float distCovered = (Time.time - startTime) * 1f;
+
+				float fracJourney = distCovered / Vector3.Distance(op1_st, door2_end);
+				opener1.transform.position = Vector3.Lerp (op1_st, door2_end, fracJourney);
+
+				float fracJourney2 = distCovered / Vector3.Distance(op3_st, door3_end);
+				opener2.transform.position = Vector3.Lerp (op2_st, door3_end, fracJourney2);
+
+
+				if ((opener1.transform.position.x == door2_end.x)&&(opener2.transform.position.x == door3_end.x)) {
+					c2.GetComponent<Curtains_Controller> ().shut = false;
+					c3.GetComponent<Curtains_Controller> ().shut = false;
+					next_phase ();
+				}
 				break;
 			}
 		case 14:
@@ -271,35 +286,29 @@ public class Level3Manager : MonoBehaviour {
 			}
 		case 15:
 			{
-				// two back
-				break;
-			}
+				c1.GetComponent<Curtains_Controller> ().shut = true;
+				c2.GetComponent<Curtains_Controller> ().shut = true;
+				c3.GetComponent<Curtains_Controller> ().shut = true;
 
-		case 16:
-			{
-				//two move
-				break;
-			}
-		case 17:
-			{
-				//wait
-				if (timer < 0) {
+
+				float distCovered = (Time.time - startTime) * 1f;
+
+				float fracJourney = distCovered / Vector3.Distance(door1_end, op1_st);
+				opener1.transform.position = Vector3.Lerp (door2_end, op1_st, fracJourney);
+
+				float fracJourney2 = distCovered / Vector3.Distance(door3_end, op3_st);
+				opener2.transform.position = Vector3.Lerp (door3_end, op2_st, fracJourney2);
+
+				if ((opener1.transform.position.x == op1_st.x)&&(opener2.transform.position.x == op2_st.x)) {
 					next_phase ();
-
-				} else {
-					timer -= Time.deltaTime;
 				}
 				break;
 			}
-		case 18:
-			{
-				// two back
-				break;
-			}
-
-		case 19:
+				
+		case 16:
 			{
 				// if it gets here then success
+				SceneManager.LoadScene ("Level3Cont");
 				break;
 			}
 
