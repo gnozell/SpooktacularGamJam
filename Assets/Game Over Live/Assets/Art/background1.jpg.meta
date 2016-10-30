@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:Assets/Art/Batman_return_of_the_joker-1.png.meta
-guid: fe02104a0bac55d429869e53549dab68
-timeCreated: 1477788012
-=======
-guid: 8939c2eed719a44e283cec6db3cb24b7
-timeCreated: 1477702215
->>>>>>> Stashed changes:Assets/Art - Copy/drawncastle.jpg.meta
+guid: 5dfee38326b2b4388a0b77881775d18e
+timeCreated: 1477694893
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
