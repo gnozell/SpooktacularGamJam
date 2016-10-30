@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 451240248ef6c1f4fbf9dd0dcb4e02b9
+guid: d33925d8cba2a4dcfafb19ec301c84fb
 timeCreated: 1477771902
 licenseType: Free
 TrueTypeFontImporter:
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Darkwood Shadow
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 451240248ef6c1f4fbf9dd0dcb4e02b9, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
