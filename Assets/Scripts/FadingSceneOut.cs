@@ -20,9 +20,10 @@ public class FadingSceneOut : MonoBehaviour {
 		waitTimer += Time.deltaTime;
 		Debug.Log ("Hello? Yes? Boosted?");
 		if (waitTimer >= (5 * numOfTexts)) {
-			Debug.Log ("Yes I am");
 			color.a += fadeSpeed;
+			Debug.Log (color.a);
 			fadeOutTexture.color = color;
+			Debug.Log (fadeOutTexture.color.a);
 		}
 	}
 }
