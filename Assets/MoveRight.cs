@@ -7,7 +7,9 @@ public class MoveRight : MonoBehaviour {
     public bool moveLeft = false;
     float i;
     public float startTime;
+	public string nextLevel;
     public float endTime = 100;
+	public float moveSpeed = .1f;
     // Use this for initialization
     void Start () {
 	
@@ -20,9 +22,9 @@ public class MoveRight : MonoBehaviour {
         if (i >= startTime)
         {
             if (moveLeft == false) transform.Translate(-.1f, 0, 0);
-            else transform.Translate(.1f, 0, 0);
+            else transform.Translate(moveSpeed, 0, 0);
         }
         if(i >= endTime)
-            SceneManager.LoadScene("Level 3");
+            SceneManager.LoadScene(nextLevel);
     }
 }
