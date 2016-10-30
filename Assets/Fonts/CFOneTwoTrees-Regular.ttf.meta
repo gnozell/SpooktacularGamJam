@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 232a6918aa21eb64881b10813156c072
+guid: f45f54627b1f54b36867ed44d4e8d4ad
 timeCreated: 1477771951
 licenseType: Free
 TrueTypeFontImporter:
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - CF One Two Trees
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 232a6918aa21eb64881b10813156c072, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
