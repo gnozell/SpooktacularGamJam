@@ -8,7 +8,7 @@ public class FadingSceneOut : MonoBehaviour {
 	public float fadeSpeed = 0.002f;
 
 	private Color color;
-	private float waitTimer = 0;
+	private float waitTimer = 0f;
 
 	void Start() {
 		color = fadeOutTexture.color;
@@ -18,7 +18,9 @@ public class FadingSceneOut : MonoBehaviour {
 
 	void Update() {
 		waitTimer += Time.deltaTime;
+		Debug.Log ("Hello? Yes? Boosted?");
 		if (waitTimer >= (5 * numOfTexts)) {
+			Debug.Log ("Yes I am");
 			color.a += fadeSpeed;
 			fadeOutTexture.color = color;
 		}
